@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Technician:</strong>
+  <%= @complaint.technician %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @complaint.summary %>
+</p>
+
+<p>
+  <strong>Landmark:</strong>
+  <%= @complaint.landmark %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @complaint.area %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @complaint.city %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @complaint.time %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @complaint.pincode %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @complaint.date %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @complaint.language %>
+</p>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  technician: 1
+  summary: MyString
+  landmark: MyString
+  area: MyString
+  city: 1
+  time: 2015-10-11 02:56:46
+  pincode: 1
+  date: 2015-10-11
+  language: 1
+
+two:
+  technician: 1
+  summary: MyString
+  landmark: MyString
+  area: MyString
+  city: 1
+  time: 2015-10-11 02:56:46
+  pincode: 1
+  date: 2015-10-11
+  language: 1
