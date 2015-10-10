@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @technician.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @technician.last_name %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @technician.profession %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @technician.area %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @technician.city %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @technician.phone_number %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @technician.language %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @technician.pincode %>
+</p>
+
+<%= link_to 'Edit', edit_technician_path(@technician) %> |
+<%= link_to 'Back', technicians_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010212646) do
+ActiveRecord::Schema.define(version: 20151010223619) do
 
   create_table "complaints", force: :cascade do |t|
     t.integer  "technician"
@@ -20,11 +20,24 @@ ActiveRecord::Schema.define(version: 20151010212646) do
     t.string   "area"
     t.integer  "city"
     t.datetime "time"
-    t.integer  "pincode"
+    t.string   "pincode"
     t.date     "date"
     t.integer  "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "technicians", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "profession"
+    t.string   "area"
+    t.integer  "city"
+    t.string   "phone_number"
+    t.integer  "language"
+    t.string   "pincode"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

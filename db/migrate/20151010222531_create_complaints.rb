@@ -7,7 +7,7 @@ class CreateComplaints < ActiveRecord::Migration
       t.string :area
       t.integer :city
       t.datetime :time
-      t.integer :pincode
+      t.string :pincode
       t.date :date
       t.integer :language
 

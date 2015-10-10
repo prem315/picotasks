@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :technicians
   resources :complaints
   devise_for :users
   get 'static_pages/home'

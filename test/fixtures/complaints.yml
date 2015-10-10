@@ -6,8 +6,8 @@ one:
   landmark: MyString
   area: MyString
   city: 1
-  time: 2015-10-11 02:56:46
-  pincode: 1
+  time: 2015-10-11 03:55:31
+  pincode: MyString
   date: 2015-10-11
   language: 1
 
@@ -17,7 +17,7 @@ two:
   landmark: MyString
   area: MyString
   city: 1
-  time: 2015-10-11 02:56:46
-  pincode: 1
+  time: 2015-10-11 03:55:31
+  pincode: MyString
   date: 2015-10-11
   language: 1
