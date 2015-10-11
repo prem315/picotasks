@@ -1,9 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+<<<<<<< HEAD
+@import "home";
+@import "services";
+=======
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "login";
 @import "contact";
 
-@import "home";
-@import "services";
+>>>>>>> venkat-pages

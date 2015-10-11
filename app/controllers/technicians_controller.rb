@@ -1,5 +1,6 @@
 class TechniciansController < ApplicationController
   before_action :set_technician, only: [:show, :edit, :update, :destroy]
+  before_action :if_admin, only: [:new, :edit,:update, :destroy, :create]
 
   # GET /technicians
   # GET /technicians.json

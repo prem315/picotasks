@@ -1,5 +1,6 @@
 class ComplaintsController < ApplicationController
   before_action :set_complaint, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /complaints
   # GET /complaints.json
@@ -62,6 +63,9 @@ class ComplaintsController < ApplicationController
   end
 
   private
+      def if_admin
+        user_signed_in? && current_user.admin?
+      end
     # Use callbacks to share common setup or constraints between actions.
     def set_complaint
       @complaint = Complaint.find(params[:id])
