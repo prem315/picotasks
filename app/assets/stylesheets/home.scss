@@ -1,6 +1,15 @@
 #home {
   font-family: 'Roboto', sans-serif;
-  background-image: image-url("home1.jpg");
+  background-image: image-url("plumb.jpg");
   background-size: cover;
   min-height: 100vh;
+  overflow: hidden;
 }
+ 
+ input[type="text"] {
+    color: #100000;
+    }
+
+  button {
+    color: #100000;
+  }  

@@ -1,53 +1,61 @@
-<%= form_for(@complaint) do |f| %>
-  <% if @complaint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      
+      
+      <%= form_for(@complaint) do |f| %>
+      <% if @complaint.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
 
-      <ul>
-      <% @complaint.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+          <% @complaint.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :technician %><br>
-    <%= f.number_field :technician %>
+      <div class="field">
+        <%= f.label :technician %><br>
+        <%= f.number_field :technician %>
+      </div>
+      <div class="field">
+        <%= f.label :summary %><br>
+        <%= f.text_field :summary %>
+      </div>
+      <div class="field">
+        <%= f.label :landmark %><br>
+        <%= f.text_field :landmark %>
+      </div>
+      <div class="field">
+        <%= f.label :area %><br>
+        <%= f.text_field :area %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.number_field :city %>
+      </div>
+      <div class="field">
+        <%= f.label :time %><br>
+        <%= f.datetime_select :time %>
+      </div>
+      <div class="field">
+        <%= f.label :pincode %><br>
+        <%= f.number_field :pincode %>
+      </div>
+      <div class="field">
+        <%= f.label :date %><br>
+        <%= f.date_select :date %>
+      </div>
+      <div class="field">
+        <%= f.label :language %><br>
+        <%= f.number_field :language %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+      <% end %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_field :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :landmark %><br>
-    <%= f.text_field :landmark %>
-  </div>
-  <div class="field">
-    <%= f.label :area %><br>
-    <%= f.text_field :area %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.number_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br>
-    <%= f.datetime_select :time %>
-  </div>
-  <div class="field">
-    <%= f.label :pincode %><br>
-    <%= f.number_field :pincode %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :language %><br>
-    <%= f.number_field :language %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
