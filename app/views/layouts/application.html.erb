@@ -7,6 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><span class="name">Picotask</span>
+          <!-- <span class="tagline">Photoshop Website Template</span>   -->
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="nav-link-container">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Services", static_pages_services_path %></li>
+            <% if user_signed_in? %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+        <li><%= link_to "Contact", static_pages_contact_path %></li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
