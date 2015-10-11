@@ -1,6 +1,14 @@
 #services {
-  background-image: image-url("s.jpg");
+  //background-image: image-url("s.jpg");
   background-size: contain;
   min-height: 100vh;
   background-repeat: no-repeat;
+  
+  .row1{
+      margin-top: 2em;
+
+      .list{
+        padding: 20px;
+      }
+  }
 }

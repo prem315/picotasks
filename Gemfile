@@ -27,8 +27,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-sass', '~> 4.4.0'
 
 gem 'devise'
-
-
+gem 'bootswatch-rails'
+gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,4 +51,10 @@ group :development do
   gem 'spring'
   gem "letter_opener"
 end
+
+group :production do
+  gem 'pg'            
+  gem 'rails_12factor'
+end
+
 

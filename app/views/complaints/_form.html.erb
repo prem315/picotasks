@@ -1,15 +1,20 @@
-<%= form_for(@complaint) do |f| %>
-  <% if @complaint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
+<div class="container">
+  <div class="row" id="formcolor">
+    <div class="col-md-4">
+      
+      
+      <%= form_for(@complaint) do |f| %>
+      <% if @complaint.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
 
-      <ul>
-      <% @complaint.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+          <% @complaint.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :technician %><br>
@@ -49,5 +54,8 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+          <% end %>
+    </div>
+
   </div>
-<% end %>
+</div>
