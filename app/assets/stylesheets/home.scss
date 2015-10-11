@@ -1,6 +1,18 @@
+body {
+  overflow-x: hidden;
+}
 #home {
   font-family: 'Roboto', sans-serif;
   background-image: image-url("s2.jpg");
-  background-size: cover;
-  min-height: 100vh;
+  // background-size: cover;
+  min-height: 95.9vh;
+  // margin-bottom: 3em;
+
+.title {
+    // margin-top: 5em;
+    position: relative;
+    top: 35px;
+    left: 25vw;
+
+  }
 }
