@@ -25,8 +25,13 @@ class ComplaintsController < ApplicationController
   # POST /complaints
   # POST /complaints.json
   def create
+    # debugger
     @complaint = Complaint.new(complaint_params)
-
+    hash = {"Plumber"=>1, "Electrician"=>2, "Carpenter"=>3, "English" => 1, "Hindi" =>2 , "Telugu"=>3, "Hyderabad"=>1, "Bangalore"=>2, "Mumbai"=>3}
+    # byebug
+    @complaint.technician= hash[complaint_params["technician"]]
+    @complaint.city= hash[complaint_params["city"]]
+    @complaint.language= hash[complaint_params["language"]]
     respond_to do |format|
       if @complaint.save
         format.html { redirect_to @complaint, notice: 'Complaint was successfully created.' }
@@ -63,9 +68,9 @@ class ComplaintsController < ApplicationController
   end
 
   private
-      def if_admin
-        user_signed_in? && current_user.admin?
-      end
+      # def if_admin
+      #   user_signed_in? && current_user.admin?
+      # end
     # Use callbacks to share common setup or constraints between actions.
     def set_complaint
       @complaint = Complaint.find(params[:id])

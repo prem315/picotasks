@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :technician %><br>
-    <%= f.number_field :technician %>
+    <%= f.collection_select :technician, Complaint::TECHNICIANS, :to_s, :to_s, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :summary %><br>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :city %><br>
-    <%= f.number_field :city %>
+     <%= f.collection_select :city, Complaint::CITIES, :to_s, :to_s, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :time %><br>
@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :language %><br>
-    <%= f.number_field :language %>
+     <%= f.collection_select :language, Complaint::LANGUAGES, :to_s, :to_s, :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
